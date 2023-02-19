@@ -6,7 +6,7 @@ const Stack = createNativeStackNavigator();
 
 export const PaymentStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerShown:false}}>
       <Stack.Screen name="PaymentList" component={PaymentList} />
       <Stack.Screen name="PaymentDetail" component={PaymentDetail} />
     </Stack.Navigator>
