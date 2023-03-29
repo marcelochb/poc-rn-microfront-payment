@@ -1,3 +1,3 @@
-import { ModelOfPaymentNavigator } from "./navigator"
+import { IPaymentNavigator } from "./navigator"
 
-export const PAYMENT_NAVIGATORS:ModelOfPaymentNavigator
+export const PAYMENT_NAVIGATORS:IPaymentNavigator

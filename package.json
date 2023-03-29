@@ -14,6 +14,9 @@
   "dependencies": {
     "@poc/templates": "*",
     "@poc/theme": "*",
+    "@poc/core": "*",
+    "@poc/ui": "*",
+    "@poc/loan": "*",
     "@react-navigation/native-stack": "^6.9.10",
     "react": "18.2.0",
     "react-native": "0.71.2"

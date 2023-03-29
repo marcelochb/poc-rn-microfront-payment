@@ -1,13 +1,13 @@
-export type ModelOfPaymentScreens = {
+export type IPaymentScreens = {
   list: string;
   detail: string;
 }
-export type ModelOfPaymentNavigator = {
+export type IPaymentNavigator = {
   stack: string;
   title: string;
-  screens: ModelOfPaymentScreens;
+  screens: IPaymentScreens;
 }
-export const PAYMENT_NAVIGATORS:ModelOfPaymentNavigator = {
+export const PAYMENT_NAVIGATORS:IPaymentNavigator = {
   stack: 'PaymentStack',
   title: 'Pagamentos',
   screens: {
