@@ -1,2 +1,1 @@
-export * from './src/routes';
-export * from './src/constants';
+export {PaymentStack} from './src';

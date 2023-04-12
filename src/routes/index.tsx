@@ -1,14 +1,21 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { PaymentDetail, PaymentList } from '../screens';
+import { screens } from '../screens';
 
 const Stack = createNativeStackNavigator();
 
-export const PaymentStack = () => {
+export const Route = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown:false}}>
-      <Stack.Screen name="PaymentList" component={PaymentList} />
-      <Stack.Screen name="PaymentDetail" component={PaymentDetail} />
-    </Stack.Navigator>
+    <Stack.Navigator screenOptions={{headerBackTitleVisible: false}}>
+    {
+      screens.map(screen => (
+        <Stack.Screen 
+          name={screen.name}
+          component={screen.component}
+          options={{title: screen.title}}
+        />
+      ))
+    }
+  </Stack.Navigator>
   )
 }

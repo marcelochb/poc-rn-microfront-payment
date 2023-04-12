@@ -4,7 +4,7 @@ import { usePaymentDetailController } from '@poc/core';
 import { useSelector } from 'react-redux';
 import { IGlobalState } from '@poc/interfaces';
 
-export const PaymentDetail = () => {
+export const PaymentDetailScreen = () => {
   const theme = useSelector((state:IGlobalState) => state.theme.value);
   const {data,error, loading} = usePaymentDetailController();
   return (

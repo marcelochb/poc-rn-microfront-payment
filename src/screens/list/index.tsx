@@ -4,14 +4,14 @@ import { PaymentEntity, usePaymentListController } from '@poc/core'
 import { useSelector } from 'react-redux'
 import { IGlobalState } from '@poc/interfaces'
 import { useNavigation } from '@react-navigation/native'
-import { PAYMENT_NAVIGATORS } from '../../constants'
+import { NAVIGATOR_CONSTANTS } from '../../constants'
 
-export const PaymentList = () => {
+export const PaymentListScreen = () => {
   const theme = useSelector((state:IGlobalState) => state.theme.value);
   const navigation = useNavigation<any>();
   const navigateToDetail = useCallback(
       (item:PaymentEntity) => {
-      navigation.navigate(PAYMENT_NAVIGATORS.screens.detail, {id: item.id});
+      navigation.navigate(NAVIGATOR_CONSTANTS.DETAIL_SCREEN_NAME, {id: item.id});
     },[]
   )  
   const {data, error, loading} = usePaymentListController();
